@@ -7,7 +7,7 @@ import (
 
 func Start() error {
 	app := setup()
-	return endless.ListenAndServe("localhost:8080", app)
+	return endless.ListenAndServe(":8080", app)
 }
 
 func setup() *gin.Engine {

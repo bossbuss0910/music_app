@@ -1,4 +1,5 @@
 package app
+
 import (
 	"github.com/fvbock/endless"
 	"github.com/gin-gonic/gin"

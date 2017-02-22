@@ -13,4 +13,12 @@ func RouteV1(app *gin.Engine) {
 		apiGroup.GET("/user/:name", helloHandler.GetName)
 		apiGroup.GET("/welcome", welcomeHandler.GetName)
 	}
+
+	registerHandler := handlers.NewRegisterHandler()
+	userGroup := app.Group("user")
+	{
+		userGroup.POST("/register", registerHandler.RegisterUser)
+		userGroup.POST("/login", registerHandler.LoginUser)
+	}
+
 }
